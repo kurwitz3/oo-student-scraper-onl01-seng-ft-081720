@@ -14,8 +14,19 @@ class Scraper
      
     doc.css(".student-card").collect do |x|
       studentz << {:name => x.css('.student-name').text,
-      :location => x.css('.student-location').text, 
-      :profile_url =>  x.css('a').attr('href').value }
+      #:location => x.css('.student-location').text, 
+      #:profile_url =>  x.css('a').attr('href').value }
+  #end
+    def self.scrape_index_page(index_url)
+    html = open(index_url)
+    doc = Nokogiri::HTML(html)
+    student_cards = doc.css(".student-card a")
+    student_cards.collect do |element|
+      {:name => element.css(".student-name").text ,
+        :location => element.css(".student-location").text,
+        :profile_url => element.attr('href')
+      }
+    end
   end
 
 end 

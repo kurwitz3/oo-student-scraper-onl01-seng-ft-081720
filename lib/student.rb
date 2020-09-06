@@ -26,7 +26,7 @@ end
     self.send("blog=", attributes_hash[:blog])
     self.send("profile_quote=", attributes_hash[:profile_quote])
     self.send("bio=", attributes_hash[:bio])
-   
+   binding.pry 
   end
 
   def self.all

@@ -13,7 +13,7 @@ class Scraper
         :profile_url => element.attr('href')
       }
     end
-    
+    binding.pry 
   end
 
 

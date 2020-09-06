@@ -22,7 +22,7 @@ class Scraper
     doc = Nokogiri::HTML(html)
     hash = {}
 
-      srcape = doc.css(".vitals-container .social-icon-container a")
+      scrape = doc.css(".vitals-container .social-icon-container a")
       scrape.each do |x| 
         if x.attr('href').include?("twitter")
           hash[:twitter] = x.attr('href')

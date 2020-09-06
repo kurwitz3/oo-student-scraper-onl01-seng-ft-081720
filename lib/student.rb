@@ -5,7 +5,7 @@ class Student
   @@all = []
 
   def initialize(student_hash)
-    self.send(name= )
+    self.send("name=",hash[:name] )
     
     
   end

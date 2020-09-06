@@ -19,6 +19,7 @@ end
   def add_student_attributes(attributes_hash)
     
   def add_student_attributes(attributes_hash)
+    binding.pry 
     self.send("twitter=", attributes_hash[:twitter])
     self.send("linkedin=", attributes_hash[:linkedin])
     self.send("github=", attributes_hash[:github])

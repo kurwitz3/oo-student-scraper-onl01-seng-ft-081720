@@ -16,7 +16,7 @@ class Student
       Student.new(hash)
   end
 end
-  def add_student_attributes(attributes_hash)
+  
     
   def add_student_attributes(attributes_hash)
     binding.pry 

@@ -13,7 +13,7 @@ class Scraper
         :profile_url => element.attr('href')
       }
     end
-    binding.pry 
+    
   end
 
 
@@ -38,7 +38,7 @@ class Scraper
       hash[:bio] = doc.css(".bio-block.details-block .bio-content.content-holder .description-holder p").text
 hash
   end
-
+binding.pry 
 end
     
  

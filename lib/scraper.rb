@@ -3,20 +3,6 @@ require 'open-uri'
 require 'pry'
 
 class Scraper
-  
-
- # def self.scrape_index_page(index_url)
-      #studentz = []
-    #html = open(index_url)
-    
-   # doc =  Nokogiri::HTML(html)
-     
-     
-    #doc.css(".student-card").collect do |x|
-      #studentz << {:name => x.css('.student-name').text,
-      #:location => x.css('.student-location').text, 
-      #:profile_url =>  x.css('a').attr('href').value }
-  #end
     def self.scrape_index_page(index_url)
     html = open(index_url)
     doc = Nokogiri::HTML(html)
@@ -32,7 +18,6 @@ class Scraper
 
 
   def self.scrape_profile_page(profile_url)
-      def self.scrape_profile_page(profile_url)
     html = open(profile_url)
     doc = Nokogiri::HTML(html)
     return_hash = {}
